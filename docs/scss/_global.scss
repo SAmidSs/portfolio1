@@ -56,3 +56,117 @@ a{
   text-decoration: none;
 }
 
+body{
+  font-size: 14px;
+  line-height: 22px;
+  color: $accent;
+  @extend %gilroy-600;
+  background: linear-gradient(222.26deg, #3B1D60 1.22%, #040D3E 106.28%);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+
+.main{
+  flex-grow: 1;
+}
+
+.container{
+  max-width: 1470px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header{
+  padding: 80px 0 110px;
+  &__inner{
+      display: flex;
+      align-items: center;
+  }
+  &__box{
+      margin-left: auto;
+  }
+  &__btn{
+      padding: 8px 28px;
+      @extend %btn;
+      margin-left: 20px;
+  }
+}
+
+
+.footer{
+  padding: 0 0 120px;
+  &-container{
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+
+.footer-top{
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 95px;
+  } 
+  &__title{
+    font-size: 26px;
+    line-height: 32px;
+    color: $span-orange;
+  }
+  &__social{
+    display: flex;
+  }
+  &__social-link{
+    margin-left: 16px;
+  }
+  &__items{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 120px;
+  }
+  &__item-list{
+    display: flex;
+  }
+  &__item-title{
+    font-size: 15px;
+    line-height: 18px;
+    color: $default;
+    margin-bottom: 25px;
+    @extend %inter-700;
+  }
+  &__list-item{
+    margin-bottom: 16px;
+  }
+  &__list-link{
+    font-size: 15px;
+    line-height: 20px;
+    color: $default;
+    letter-spacing: 0.2px;
+    @extend %inter-400;
+  }
+}
+
+.footer-bottom{
+  display: flex;
+  justify-content: center;
+  &__text{
+    display: block;
+    margin-right: 35px;
+    @extend %inter-400;
+    color: #8D8D8D;
+  }
+  &__list{
+    display: flex;
+  }
+  &__item + .footer-bottom__item{
+    margin-left: 32px;
+  }
+  &__link{
+    color: #8D8D8D;
+    @extend %inter-400;
+    font-size: 14px;
+    line-height: 20px;
+    
+  }
+}

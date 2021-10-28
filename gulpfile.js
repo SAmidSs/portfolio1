@@ -10,7 +10,7 @@ const del = require('del');
 function browsersync() {
     browserSync.init({
         server : {
-            baseDir: 'app/'
+            baseDir: 'docs/'
         }
     });
 }
@@ -20,7 +20,7 @@ function cleanDist() {
 }
 
 function images() {
-    return src('app/img/**/*')
+    return src('docs/img/**/*')
     .pipe(imagemin(
     [
         imagemin.gifsicle({interlaced: true}),
@@ -40,22 +40,22 @@ function images() {
 function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.js',
-        'app/js/main.js'
+        'docs/js/main.js'
     ])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
-    .pipe(dest('app/js'))
+    .pipe(dest('docs/js'))
     .pipe(browserSync.stream())
 }
 
 function styles() {
-    return src('app/scss/**/*.scss')
+    return src('docs/scss/**/*.scss')
         .pipe(scss({outputStyle: 'compressed'}))
         .pipe(concat('style.min.css'))
         .pipe(autoprefixer({
             overrideBrowserslist: ['last 10 version']
         }))
-        .pipe(dest('app/css'))
+        .pipe(dest('docs/css'))
         .pipe(browserSync.stream())
 }
 
@@ -64,24 +64,24 @@ function libs() {
         'node_modules/normalize.css/normalize.css'
     ])
     .pipe(concat('_libs.scss'))
-    .pipe(dest('app/scss'))
+    .pipe(dest('docs/scss'))
     .pipe(browserSync.stream())
 }
 
 function build() {
     return src([
-        'app/css/style.min.css',
-        'app/fonts/**/*',
-        'app/js/main.min.js',
-        'app/*.html'
-    ], {base: 'app'})
+        'docs/css/style.min.css',
+        'docs/fonts/**/*',
+        'docs/js/main.min.js',
+        'docs/*.html'
+    ], {base: 'docs'})
     .pipe(dest('dist'))
 }
 
 function watching() {
-    watch(['app/scss/**/*.scss'], styles);
-    watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
-    watch(['app/*.html']).on('change', browserSync.reload);
+    watch(['docs/scss/**/*.scss'], styles);
+    watch(['docs/js/**/*.js', '!docs/js/main.min.js'], scripts);
+    watch(['docs/*.html']).on('change', browserSync.reload);
 }
 
 

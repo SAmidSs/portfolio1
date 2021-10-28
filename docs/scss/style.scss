@@ -1,9 +1,27 @@
 @import "vars";
 @import "libs";
 @import "global";
+@import "fonts";
 
 
 
+.menu{
+    margin-left: 44px;
+    &__list{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item + .menu__item{
+        margin-left: 20px;
+    }
+    &__link{
+        color: #B5B5B5;
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+}
 
 
 @import "media";

@@ -1,0 +1,53 @@
+$title: #99EFD0;
+$span-orange: #F2994A;
+$default: #fff;
+$accent: #8476AA;
+
+
+%btn{
+    color: $default;
+    background-color: $span-orange;
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 20px;
+    cursor: pointer;
+    border: 1px solid $span-orange;
+    transition: all .3s;
+    &:hover{
+        color: $span-orange;
+        background-color: inherit;
+    }
+}
+
+%gilroy-700{
+    font-family: 'gilroy-bold', sans-serif;
+    font-weight: 700;
+}
+
+%gilroy-600{
+    font-family: 'gilroy-semibold', sans-serif;
+    font-weight: 600;
+}
+
+
+%inter-700{
+    font-family: 'Inter-Bold', sans-serif;
+    font-weight: 700;
+}
+
+
+%inter-400{
+    font-family: 'Inter-Reqular', sans-serif;
+    font-weight: 400;
+}
+
+
+%rubik-500{
+    font-family: 'Rubik-Medium', sans-serif;
+    font-weight: 500;
+}
+
+%rubik-400{
+    font-family: 'Rubik-Reqular', sans-serif;
+    font-weight: 400;
+}
