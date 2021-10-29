@@ -11,6 +11,7 @@ $accent: #8476AA;
     font-size: 12px;
     line-height: 20px;
     cursor: pointer;
+    text-transform: uppercase;
     border: 1px solid $span-orange;
     transition: all .3s;
     &:hover{
