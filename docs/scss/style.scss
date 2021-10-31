@@ -106,18 +106,217 @@
     margin-bottom: 100px;
     &__items{
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
     }
     &__item{
+        margin: 0 37px;
         img{
             opacity: .3;
         }
     }
-    &__item + .partners__item{
-        margin-left: 74px;
+}
+
+
+
+
+
+
+
+.choice{
+    padding-bottom: 160px;
+    &__title{
+        text-align: center;
+        margin-bottom: 13px;
+    }
+    &__subtitle{
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 40px 50px;
+        
+    }
+    &__item{
+        max-width: 300px;
+        padding-left: 50px;
+        position: relative;
+    }
+    &__item-title{
+        font-size: 18px;
+        line-height: 22px;
+        color: $title;
+        @extend %gilroy-700;
+        margin-bottom: 10px;
+    }
+    &__item-text{
+        font-size: 14px;
+        line-height: 22px;
+        @extend %gilroy-600;
     }
 }
+
+.choice__item--elegance,
+.choice__item--airpods,
+.choice__item--network,
+.choice__item--game,
+.choice__item--chain,
+.choice__item--lamp{
+    &::before{
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        left: 0;
+        top: 0;
+    }
+}
+
+
+.choice__item--elegance{
+    &::before{
+        background-image: url(../images/choice/choice_icon-1.svg);
+    }
+}
+.choice__item--airpods{
+    &::before{
+        background-image: url(../images/choice/choice_icon-2.svg);
+    }
+}
+.choice__item--network{
+    &::before{
+        background-image: url(../images/choice/choice_icon-3.svg);
+    }
+}
+.choice__item--game{
+    &::before{
+        background-image: url(../images/choice/choice_icon-4.svg);
+    }
+}
+.choice__item--chain{
+    &::before{
+        background-image: url(../images/choice/choice_icon-5.svg);
+    }
+}
+.choice__item--lamp{
+    &::before{
+        background-image: url(../images/choice/choice_icon-6.svg);
+    }
+}
+
+
+
+.traffic{
+    padding-bottom: 180px;
+    position: relative;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: -40px;
+            right: -45px;
+            width: 140px;
+            height: 152px;
+            z-index: -1;
+            background-image: url(../images/traffic/traffic-bg-1.svg);
+        }
+    }
+    &__info{
+        max-width: 470px;
+    }
+    &__info-title{
+        margin-bottom: 32px;
+    }
+    &__info-subtitle{
+        margin-bottom: 43px;
+    }
+    &__info-btn{
+        @extend %btn;
+        padding: 14px 30px;
+    }
+    &__img{
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 232px;
+            height: 225px;
+            background-color: #1D2067;
+            top: 17px;
+            left: -106px;
+            background-image: url(../images/traffic/traffic-img_graph.svg);
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: -33px;
+            width: 160px;
+            height: 97px;
+            left: -18px;
+            background-image: url(../images/traffic/traffic-img_arrow.png);
+        }
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        top: 217px;
+        width: 384px;
+        height: 566px;
+        left: 0;
+        background-image: url(../images/traffic/traffic-bg-2.png);
+    }
+}
+
+
+
+
+
+.bunch{
+    padding-bottom: 170px;
+    &__title{
+        max-width: 864px;
+        margin: 0 auto 32px;
+        text-align: center;
+    }
+    &__subtitle{
+        max-width: 414px;
+        margin: 0 auto 48px;
+        text-align: center;
+    }
+    &__items{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item{
+        width: 291px;
+    }
+    &__item-title{
+        font-size: 36px;
+        line-height: 42px;
+        color: $title;
+        margin-bottom: 16px;
+        text-align: center;
+    }
+    &__item-text{
+        text-align: center;
+        font-size: 15px;
+        line-height: 20px;
+        color: $accent;
+    }
+}
+
+
+
+
+
 
 
 
