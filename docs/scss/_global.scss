@@ -122,6 +122,21 @@ body{
   flex-grow: 1;
 }
 
+
+.box-info{
+  max-width: 470px;
+  &__title{
+    margin-bottom: 32px;
+  }
+  &__subtitle{
+    margin-bottom: 43px;
+  }
+  &__btn{
+    @extend %btn;
+    padding: 14px 30px;
+  }
+}
+
 .span-orange{
   color: $span-orange;
 }
