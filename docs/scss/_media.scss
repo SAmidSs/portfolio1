@@ -1,0 +1,131 @@
+@media(max-width: 1040px){
+    .menu{
+        order: 1;
+        margin-left: 40px;
+        transition: all .3s;
+        &__btn{
+            width: 30px;
+            height: 22px;
+            z-index: 99;
+            border: none;
+            background-color: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            padding: 0;
+            cursor: pointer;
+            span{
+                width: 100%;
+                height: 3px;
+                background-color: $title;
+            }
+            &::after,
+            &::before{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 3px;
+                background-color: $title;
+                transition: all .3s;
+            }
+            &::before{
+                top: 0;
+            }
+            &::after{
+                bottom: 0;
+            }
+        }
+        &__btn--active{
+            width: 30px;
+            height: 22px;
+            transition: all .3s;
+            span{
+            display: none;
+            }
+            &::after,
+            &::before{
+                top: 8px;
+            }
+            &::after{
+                transform: rotate(-45deg);
+            }
+            &::before{
+                transform: rotate(45deg);
+            }
+        }
+        &__list{
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #8476AA;
+            transform: translateX(-200%);
+            transition: all .3s;
+            &.menu__list--active{
+                transform: translateX(0%);
+            }
+
+        }
+        &__link{
+            margin: 0 50px;
+            display: block;
+            transition: all .3s;
+            padding: 40px 5px 20px;
+            font-size: 25px;
+            border-bottom: 3px solid transparent;
+            width: 50%;
+            &:hover{
+                color: $title;
+                border-bottom: 3px solid $title;
+            }
+            
+        }
+        &__item + .menu__item{
+            margin-left: 0px;
+        }
+    }
+}
+
+
+
+
+@media(max-width: 483px){
+    .header{
+        &__inner{
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        &__box{
+            margin-top: 20px;
+            margin-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &__btn{
+            margin-bottom: 20px;
+            margin-left: 20px;
+        }
+    }
+    .menu{
+        order: 0;
+        &__btn{
+            margin-left: auto;
+        }
+        &__link{
+            font-size: 15px;
+            width: auto;
+        }
+    }
+}
+
+@media(max-width: 450px){
+    .header{
+        &__btn{
+            margin-left: 5px;
+        }
+    }
+}
