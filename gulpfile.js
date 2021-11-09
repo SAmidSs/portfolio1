@@ -40,6 +40,7 @@ function images() {
 function scripts() {
     return src([
         'node_modules/jquery/dist/jquery.js',
+        'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
         'docs/js/main.js'
     ])
     .pipe(concat('main.min.js'))
@@ -59,14 +60,14 @@ function styles() {
         .pipe(browserSync.stream())
 }
 
-function libs() {
-    return src([
-        'node_modules/normalize.css/normalize.css'
-    ])
-    .pipe(concat('_libs.scss'))
-    .pipe(dest('docs/scss'))
-    .pipe(browserSync.stream())
-}
+// function libs() {
+//     return src([
+//         'node_modules/normalize.css/normalize.css'
+//     ])
+//     .pipe(concat('_libs.scss'))
+//     .pipe(dest('docs/scss'))
+//     .pipe(browserSync.stream())
+// }
 
 function build() {
     return src([
@@ -86,7 +87,7 @@ function watching() {
 
 
 
-exports.libs = libs;
+// exports.libs = libs;
 exports.styles = styles;
 exports.watching = watching;
 exports.browsersync = browsersync;
@@ -97,4 +98,4 @@ exports.cleanDist = cleanDist;
 
 
 exports.build = series(cleanDist, images, build);
-exports.default = parallel( styles, libs, scripts, browsersync, watching); 
+exports.default = parallel( styles, scripts, browsersync, watching); 
