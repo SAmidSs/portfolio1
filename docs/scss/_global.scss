@@ -72,6 +72,11 @@ body{
   flex-direction: column;
 }
 
+.menu-open{
+  overflow: hidden;
+  min-width: 100%;
+  min-height: 100%;
+}
 
 .container{
   max-width: 1470px;
