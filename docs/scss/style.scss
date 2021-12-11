@@ -56,12 +56,14 @@
 
     }
     &__btn{
+        @extend %rubik-500;
         @extend %btn;
         width: 157px;
         height: 46px;
         display: flex;
         align-items: center;
         justify-content: center;
+        letter-spacing: 2px;
         margin-bottom: 73px;
         & + .reasons-box__btn{
             margin-left: 20px;
@@ -78,7 +80,7 @@
         font-size: 16px;
         line-height: 22px;
         margin-bottom: 6px;
-        @extend %rubik-400;
+        @extend %rubik-500;
     }
     &__video-btn{
         font-size: 14px;

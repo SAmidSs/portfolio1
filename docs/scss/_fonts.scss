@@ -1,64 +1,64 @@
 @font-face{
-    font-family: 'gilroy-bold', sans-serif;
+    font-family: 'gilroy';
     font-weight: 700;
     font-style: normal;
-    src: local('gilroy-bold'),
+    src: local('gilroy'),
          url(../fonts/gilroy-bold.woff2) format('woff2'),
-         url(../fonts/gilroy-bold.woff2) format('woff');
+         url(../fonts/gilroy-bold.woff) format('woff');
     font-display: swap;
 }
 
 
 @font-face{
-    font-family: 'gilroy-semibold', sans-serif;
+    font-family: 'gilroy';
     font-weight: 600;
     font-style: normal;
-    src: local('gilroy-semibold'),
+    src: local('gilroy'),
          url(../fonts/gilroy-semibold.woff2) format('woff2'),
-         url(../fonts/gilroy-semibold.woff2) format('woff');
+         url(../fonts/gilroy-semibold.woff) format('woff');
     font-display: swap;
 }
 
 
 
 @font-face{
-    font-family: 'Inter-Bold', sans-serif;
+    font-family: 'Inter';
     font-weight: 700;
     font-style: normal;
-    src: local('Inter-Bold'),
+    src: local('Inter'),
          url(../fonts/Inter-Bold.woff2) format('woff2'),
-         url(../fonts/Inter-Bold.woff2) format('woff');
+         url(../fonts/Inter-Bold.woff) format('woff');
     font-display: swap;
 }
 
 
 @font-face{
-    font-family: 'Inter-Reqular', sans-serif;
+    font-family: 'Inter';
     font-weight: 400;
     font-style: normal;
-    src: local('Inter-Reqular'),
+    src: local('Inter'),
          url(../fonts/Inter-Reqular.woff2) format('woff2'),
-         url(../fonts/Inter-Reqular.woff2) format('woff');
+         url(../fonts/Inter-Reqular.woff) format('woff');
     font-display: swap;
 }
 
 
 @font-face{
-    font-family: 'Rubik-Medium', sans-serif;
+    font-family: 'Rubik';
     font-weight: 500;
     font-style: normal;
-    src: local('Rubik-Medium'),
+    src: local('Rubik'),
          url(../fonts/Rubik-Medium.woff2) format('woff2'),
-         url(../fonts/Rubik-Medium.woff2) format('woff');
+         url(../fonts/Rubik-Medium.woff) format('woff');
     font-display: swap;
 }
 
 @font-face{
-    font-family: 'Rubik-Reqular', sans-serif;
+    font-family: 'Rubik';
     font-weight: 400;
     font-style: normal;
-    src: local('Rubik-Reqular'),
+    src: local('Rubik'),
          url(../fonts/Rubik-Reqular.woff2) format('woff2'),
-         url(../fonts/Rubik-Reqular.woff2) format('woff');
+         url(../fonts/Rubik-Reqular.woff) format('woff');
     font-display: swap;
 }
